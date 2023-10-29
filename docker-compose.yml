@@ -1,0 +1,17 @@
+###############################################################################
+#                          Generated on docker.io                          #
+#                        https://phpdocker.io/generator                       #
+###############################################################################
+version: '3.5'
+
+services:
+
+    php-fpm:
+        build:
+            context: .
+            dockerfile: docker/php-fpm/Dockerfile
+        container_name: phpgo
+        working_dir: /examples
+        volumes:
+            - .:/examples
+            - ./docker/php-fpm/php-ini-overrides.ini:/etc/php/8.2/fpm/conf.d/99-overrides.ini
