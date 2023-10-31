@@ -57,4 +57,6 @@ _Note : you can exit the shell whenever you wish with ```exit``` ._
 
 cd into the examples directory and into each of the subdirectories - the README.md in each has the instructions on how 
 
+###
+This work extends the excellent examples provided by eislambey in : https://github.com/eislambey/php-ffi-go-example/
 
