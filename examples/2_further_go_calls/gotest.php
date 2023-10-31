@@ -3,11 +3,11 @@
 /**
  * Declaration of FFI components
  *
- * GoString is a C Style struct for a string with a length.
+ * Define GoString - a C Style struct for a string with a length.
  *
- * print : a function accepting a string
- * sum : a function accepting two ints and returning an int
- *
+ * print : a function accepting a string.
+ * sum : a function accepting two ints and returning an int.
+ * reverse : a function accepting a string, and returning a string.
  * */
 $my_go_library = FFI::cdef(
     "typedef struct { char* p; long n } GoString;
@@ -43,12 +43,15 @@ function stringToGoString(FFI $ffi, string $name): FFI\CData
 
 
 // Example 1 : Passing two ints and receiving the return value.
+
 $sum = $my_go_library->sum(123,456);
 echo "Sum is $sum " , PHP_EOL;
 
 
+
 // Example 2 : Passing a string into the function.
 // The string requires converting into a GoString
+
 $example_string = "This is a string!";
 $my_go_library->print(stringToGoString($my_go_library, $example_string));
 
