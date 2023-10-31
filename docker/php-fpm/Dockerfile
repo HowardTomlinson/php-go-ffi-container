@@ -16,7 +16,7 @@ RUN apt-get update; \
 
 # Install git, golang
 RUN apt-get update \
-    && apt-get -y --no-install-recommends install golang-go \
+    && apt-get -y install golang-go gcc build-essential \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
 
