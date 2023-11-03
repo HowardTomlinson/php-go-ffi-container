@@ -10,6 +10,6 @@ From within this directory, run:
 
 Run the PHP with
 
-```php gotest.go```
+```php gotest.php```
 
 

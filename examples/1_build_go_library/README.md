@@ -16,7 +16,7 @@ You'll see that it creates two new files :
 
 Run the PHP with
 
-```php gotest.go```
+```php gotest.php```
 
 
 
